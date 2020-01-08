@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+  "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "react-app",
+      "plugin:prettier/recommended"
+  ],
+  "plugins": ["prettier", "@typescript-eslint", "react"],
+  "rules": {}
+}
