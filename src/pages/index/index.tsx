@@ -1,19 +1,14 @@
 import React from 'react';
 import { Form, Select, InputNumber, DatePicker, Switch, Slider, Button } from 'antd';
+import moment from 'moment';
+import MainLayout from '../../layout/Main';
 
 const HomePage: React.FC = () => {
   return (
-    <div>
+    <MainLayout>
       <Form layout="horizontal">
         <Form.Item label="Input Number" labelCol={{ span: 8 }} wrapperCol={{ span: 8 }}>
-          <InputNumber
-            size="large"
-            min={1}
-            max={10}
-            style={{ width: 100 }}
-            defaultValue={3}
-            name="inputNumber"
-          />
+          <InputNumber size="large" min={1} max={10} style={{ width: '100%' }} defaultValue={3} />
         </Form.Item>
 
         <Form.Item label="Switch" labelCol={{ span: 8 }} wrapperCol={{ span: 8 }}>
@@ -25,29 +20,26 @@ const HomePage: React.FC = () => {
         </Form.Item>
 
         <Form.Item label="Select" labelCol={{ span: 8 }} wrapperCol={{ span: 8 }}>
-          <Select size="large" defaultValue="lucy" style={{ width: 192 }}>
-            <Select.Option value="jack">jack</Select.Option>
-            <Select.Option value="lucy">lucy</Select.Option>
+          <Select size="large" defaultValue="lucy" style={{ width: '100%' }}>
+            <Select.Option value="jack">Jack</Select.Option>
+            <Select.Option value="lucy">Lucy</Select.Option>
             <Select.Option value="disabled" disabled>
-              disabled
+              Disabled
             </Select.Option>
-            <Select.Option value="yiminghe">yiminghe</Select.Option>
+            <Select.Option value="yiminghe">Yiminghe</Select.Option>
           </Select>
         </Form.Item>
 
         <Form.Item label="DatePicker" labelCol={{ span: 8 }} wrapperCol={{ span: 8 }}>
-          <DatePicker name="startDate" />
+          <DatePicker defaultValue={moment(new Date(), 'YYYY-MM-DD')} style={{ width: '100%' }} />
         </Form.Item>
         <Form.Item style={{ marginTop: 48 }} wrapperCol={{ span: 8, offset: 8 }}>
-          <Button size="large" type="primary" htmlType="submit">
+          <Button size="large" type="primary" htmlType="submit" block>
             OK
-          </Button>
-          <Button size="large" style={{ marginLeft: 8 }}>
-            Cancel
           </Button>
         </Form.Item>
       </Form>
-    </div>
+    </MainLayout>
   );
 };
 

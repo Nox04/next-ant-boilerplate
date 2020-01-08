@@ -4,6 +4,7 @@
     [
       "import",
       { "libraryName": "antd", "style": "css" }
-    ] // `style: true` for less
+    ],
+    ["styled-components", { "ssr": true }]
   ]
 }
