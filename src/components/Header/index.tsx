@@ -22,8 +22,8 @@ const Header: React.FC = () => {
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={['home']}
-        style={{ lineHeight: '64px' }}
         onSelect={handleOnSelect}
+        style={{ float: 'right', lineHeight: '64px' }}
       >
         <Menu.Item key="home">Home</Menu.Item>
         <Menu.Item key="venues">Venues</Menu.Item>
